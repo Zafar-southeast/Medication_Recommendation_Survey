@@ -1,4 +1,4 @@
-# Deep Learning and Large Language Models for Medication Recommendation — Survey Resources
+# Trustworthy Medication Recommendation: A Safety-Centered Survey of Knowledge-Grounded and LLM-Assisted Methods
 
 This repository accompanies the survey paper:
 
