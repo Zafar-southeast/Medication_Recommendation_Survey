@@ -1,53 +1,70 @@
 # Trustworthy Medication Recommendation: A Safety-Centered Survey of Knowledge-Grounded and LLM-Assisted Methods
 
-This repository accompanies our survey and provides supporting materials, study registers, and LaTeX sources.
+This repository accompanies our survey and provides supporting materials, study registers, quality assessments, safety-evaluation records, and LaTeX sources.
 
 ## Overview
 
-The updated survey synthesizes **60 eligible medication recommendation studies published in 2022–2026**, covering structured neural models, graph learning, multimodal approaches, offline reinforcement learning, and LLM/RAG methods.
+The survey synthesizes **60 eligible medication recommendation studies (2022–2026)**, covering structured neural models, graph learning, multimodal approaches, offline reinforcement learning, and LLM/RAG-assisted methods.
 
-The taxonomy examines patient information, model architectures, knowledge integration, evaluation, safety, and deployment considerations. Categories overlap.
+The taxonomy examines patient information, model architectures, knowledge integration, safety, evaluation, and deployment. Categories are non-mutually exclusive.
 
 ## Study Selection
 
-The original database-search cutoff was **20 May 2026**. A targeted revision update was completed on **3 October 2026**.
+The original database-search cutoff was **20 May 2026**, followed by a targeted revision update completed on **3 October 2026**.
 
 | Stage | Count |
 | :--- | ---: |
-| Records identified in the original formal search | 132 |
+| Records identified | 132 |
 | Duplicates removed | 39 |
 | Records screened | 93 |
-| Original roster entries | 56 |
-| Diagnosis-only MetaCare++ excluded during revision | 1 |
+| Title/abstract exclusions | 37 |
+| Original study roster | 56 |
+| Diagnosis-only MetaCare++ excluded | 1 |
 | Eligible original studies retained | 55 |
 | Full-text studies added during revision | 5 |
-| **Updated included studies** | **60** |
+| **Total included studies** | **60** |
 
-The five additions are **RPNet, MetaDrug, HypeMed, GenRxR**, and **safety-aware offline RL for nephrotoxic medication management**. The targeted update does not represent an exhaustive database-search rerun.
+The five additions are **RPNet, MetaDrug, HypeMed, GenRxR**, and **safety-aware offline RL for nephrotoxic medication management**.
 
-Foundational pre-2022 studies and contextual citations are excluded from the 60-study count.
+The targeted update was not an exhaustive database-search rerun. Pre-2022 foundational studies and contextual references are excluded from the 60-study count.
 
 ## Repository Contents
 
 | File | Description |
 | :--- | :--- |
-| `updated_study_register.csv` | Updated register of all 60 included studies |
-| `appraisal_subset_47.csv` | Available ordinal appraisal for 47 included studies |
-| `revision_evidence_extraction.csv` | Evidence extraction for the five additions |
-| `supplementary_revision_addendum.tex` | Updated supplementary documentation |
-| `manuscript.tex` | Manuscript with important revisions highlighted |
-| `manuscript-clean.tex` | Clean manuscript compilation entry point |
-| `cas-refs.bib` | External bibliography |
+| `updated_study_register.csv` | Register of 60 eligible studies |
+| `appraisal_60.csv` | Descriptive quality appraisal of all 60 studies |
+| `revision_evidence_extraction.csv` | Evidence extraction for revision additions |
+| `supplementary_revision_addendum.tex` | Revised supplementary documentation and evidence audit |
+| `manuscript.tex` | Revised manuscript with highlighted changes |
+| `manuscript-clean.tex` | Clean manuscript |
+| `cas-refs.bib` | Bibliography |
 
-The project includes required figures and Elsevier style files. Original search and screening documentation should be read alongside the revised register. Standalone PRISMA and taxonomy files should match the updated manuscript.
+The repository also includes relevant figures, Elsevier style files, and original screening documentation.
 
-## Evidence Coverage
+## Quality Assessment and Safety Evidence
 
-Appraisal ratings are available for **47 of 60 studies**. Full-corpus counts for individual safety endpoints require further extraction. Benchmark DDI rates and prescription agreement should be distinguished from demonstrated clinical safety.
+All **60 studies** are covered by the seven-criterion descriptive appraisal, comprising 47 original-roster ratings and 13 newly assigned ratings pending final author cross-check.
+
+The endpoint-level evidence audit confirmed:
+
+| Evaluation dimension | Studies |
+| :--- | ---: |
+| Predictive performance | 58 |
+| Drug–drug interaction (DDI) evaluation | 33 |
+| External institutional validation | 30 |
+| Robustness/subgroup testing | 14 |
+| Contraindication violations | 1 |
+| Probability calibration | 1 |
+| Grounding/hallucination evaluation | 1 |
+
+Endpoint verification remains incomplete; these figures represent confirmed evaluations rather than definitive absence of evaluation in other studies.
+
+Benchmark DDI rates and prescription agreement should not be interpreted as demonstrated clinical safety.
 
 ## Data Availability
 
-No new primary clinical dataset was created or analyzed. Reviewed studies use public and private datasets, including MIMIC-III, MIMIC-IV, eICU, and MIMIC-CXR. Access and licensing conditions are determined by the original providers. Patient-level data are not distributed here.
+No new primary clinical dataset was generated or analyzed. Reviewed studies use public and private clinical datasets, including MIMIC-III, MIMIC-IV, and eICU. Access is governed by the original data providers. No patient-level data are distributed.
 
 ## Citation
 
